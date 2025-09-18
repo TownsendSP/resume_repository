@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{-2pt}{}[\vspace{-2pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-6pt, leftmargin=12pt, topsep=4pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+	
+	% \vspace{-100pt}
+	% name
+	\vspace{-70pt}
+	\centerline{\huge Townsend Southard Pantano}
+	
+	\vspace{-1pt}
+	
+	% contact information
+	\centerline{\href{mailto:tgsoutha@syr.edu}{tgsoutha@syr.edu} | \href{tel:+19785120472}{+1 (978) 512-0472} | \href{https://github.com/TownsendSP}{github.com/TownsendSP}}
+	\vspace{-13.5pt}
+	% skills section
+	\section*{Skills}
+	\textbf{Programming:} C, C++, C\#, Java, SQL, Bash, R, Javascript, Python, Django, PyTorch, Tensorflow, lldb, gdb, x64dbg, CMake, Qt5, Gradle, OpenGL, HTML, \LaTeX, Haskell, Racket\\
+	\textbf{Tools:} Microsoft Office, JetBrains IDEs, Binary Ninja, Ghidra, Frida, Burp Suite, Git, Unity, Visual Studio, Radare2
+	\textbf{Technical Proficiencies:} Reverse Engineering, Full-Stack, iOS Reversing, Object-Oriented Programming, Machine Learning, Large Language Models, Data Mining \& Analysis, AI, Web Development, Mobile Development, Scripting
+	\vspace{-17pt}
+	
+	% experience section
+	\section*{Experience}
+	\textbf{Engineering Intern, Agile Cyber Systems} {Assured Information Security} -- Rome, NY \hfill May 2025 -- Current \\
+	\vspace{-8pt}
+	\begin{itemize}
+		\item Architected a provider-agnostic Python framework that enabled rapid integration of LLM capabilities into enterprise products, improving documentation search via RAG and optimized for scalability and efficient inference on laptop-scale platforms.even on consumer GPUs.
+		\item Directed project strategy and key technical decisions, leveraging advanced expertise in machine learning and LLM internals to ensure efforts targeted the highest-impact performance and usability improvements.
+		\item Optimized system scalability by decoupling embedding from inference, freeing GPU resources for larger models and significantly enhancing response speed, reliability, and accuracy.
+		\item Integrated state-of-the-art LLMs (e.g., GLM 4.5 AIR, Qwen-3) within days of release, ensuring clients immediate access to leading-edge capabilities and strengthening product competitiveness.
+		\item Orchestrated a CI/CD pipeline using GitLab Actions and Docker and deployed GPU-backed LLM servers to support IDE assistants and integration projects, later enhancing maintainability by migrating to llama.cpp.
+	\end{itemize}
+	\vspace{-8pt}
+	\textbf{Engineering Intern, Analysis \& Exploitation} {Assured Information Security} -- Rome, NY \hfill May 2024 -- May 2025 \\
+	\vspace{-8pt}
+	\begin{itemize}
+		\item Reverse-engineered client binaries to recover Python source code via automated and manual bytecode translation, completing the engagement ahead of schedule and uncovering data retention violations
+		\item Assessed iOS app compliance with DHS security standards through reverse engineering, traffic analysis, and model manipulation, uncovering exploitable vulnerabilities in NLP model loading.
+		\item Researched DNP3 protocol for a client engagement and developed Python scripts simulating malicious activity.
+		\item Authored an iOS security testing handbook detailing workflows for app instrumentation, analysis on jailbroken/non-jailbroken devices, and techniques for identifying new vulnerabilities.
+	\end{itemize}
+	
+	\vspace{-6pt}
+	\textbf{Undergraduate Researcher,} {Syracuse University} -- Syracuse, NY \hfill May 2023 -- August 2023 \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Contributed to faculty-led research project developing a Windows PE binary corpus compilation system
+		\item Implemented PyTorch-based ML workflows, achieving 71\% accuracy in malware detection, validating the dataset's effectiveness for advanced research applications.
+		\item Replicated prior binary analysis studies, rewriting code for current disassemblers to validate dataset viability.
+		\item Co-authored paper accepted to NeurIPS 2024 (arxiv.org/abs/2405.03991)
+	\end{itemize}
+	\vspace{-6pt}
+	\textbf{ECS Peer Tutor,} {Syracuse University} -- Syracuse, NY \hfill Feb 2023 -- May 2023 \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Tutored peers taking the Computer Organization and programming systems course
+		\item Helped peers understand the core concepts of the course - x86 Assembly, stack manipulation, memory management, debugging with GDB, and Caches
+	\end{itemize}
+	
+	\vspace{-25pt}
+	
+	
+	% education section
+	\section*{Education}
+	\textbf{Syracuse University, } {College of Engineering and Computer Science} -- Syracuse, NY \hfill Current GPA: 3.7 \\
+	\hspace{2em}BS in Computer Science, \textit{magna cum laude} \hfill May 2025 \\
+	\hspace{2em}MS in Computer Science \hfill Anticipated May 2026 \\
+	
+	\vspace{-20pt}
+	% projects section
+	\section*{Projects}
+	\textbf{Custom Virtualization-Based Obfuscator} \hfill (private repo) \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Authored an accompanying research paper and literature review surveying contemporary academic and commercial software-obfuscation techniques.  
+		\item Implemented a full ARM RV32i software interpreter in C++ to virtualize targeted functions and provide a controlled execution environment.  
+		\item Built a binary-rewriting pipeline using LLVM/Clang and CMake for compilation and Python + Capstone for disassembly/analysis: compile-to-ARM, transform and randomize instruction streams, reassemble, inject obfuscated code as binary sections, and patch call sites to the handler.  
+		\item Engineering per-function virtualization primitives (custom instruction-set prototypes, randomized stack layouts) to diversify instruction semantics and raise the cost of static/dynamic analysis - currently in progress.
+	\end{itemize}
+	\vspace{-7pt}
+	\textbf{Secondhand Store Inventory System} \hfill \href{https://github.com/TownsendSP/SecondHandStoreInventorySystem}{github.com/TownsendSP/SecondHandStoreInventorySystem} \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Developed a full-stack inventory application using Django, React, Python, and MariaDB
+		\item Integrated a multimodal AI model, achieving over $80\%$ accuracy in generating product descriptions and prices
+		\item Created a custom internal API for communicating with the AI model to reduce overhead
+		\item Self-hosted the AI models and web stack on a GPU-accelerated Linux server
+		\item Implemented dynamic image optimization to enhance website performance, improving loading speed 
+	\end{itemize}
+	\vspace{-7pt}
+	
+	\textbf{Qt License Verification Program} \hfill \href{https://github.com/TownsendSP/ISC_Crackme}{github.com/TownsendSP/ISC\_Crackme} \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Built a cross-platform license verification program in C++ with Qt5 for MacOS, Linux, and Windows
+		\item Added internal integrity checks to detect and prevent license tampering
+		\item Conducted a workshop reverse engineering the system, including binary patching and license creation using Binary Ninja
+		\item Conducted an Information Security club workshop on reverse engineering the system, including binary patching and license creation with Binary Ninja, as well as a detailed write-up to support the workshopwalkthrough document to support the workshopd
+	\end{itemize}
+	
+	\vspace{-7pt}
+	
+	\textbf{Sentiment Analysis of Social Media Networks} \hfill \href{https://github.com/TownsendSP/Comparative_Sentiment_Analysis}{github.com/TownsendSP/Comparative\_Sentiment\_Analysis} \\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Analyzed 20M+ Tweets and Bluesky posts from public datasets using sentiment analysis
+		\item Optimized ML workloads via parallelization and scheduling to process over 1000 posts/sec on a consumer GPU
+		\item Discovered key insights, including more negativity in replies than top-level posts and 20\% more negative posts on Twitter compared to Bluesky
+	\end{itemize}
+	
+	\vspace{-25pt}
+	
+	\section*{Extracurriculars:}
+\textbf{Syracuse Information Security Club} \hfill Sept 2022 – Current \\
+\vspace{-9pt}
+\begin{itemize}
+	\item Qualified for NECCDC Regionals, managing Linux systems, Red Team response, and services.  
+	\item \textbf{Treasurer} (May 2024 – May 2025), managing budget and resource allocation to support club operations.  
+	\item Transitioned to \textbf{Competition Lead} (May 2025 – Current), designing and leading cybersecurity workshops, coordinating team registration with host schools, and managing travel logistics for in-person competitions.  
+	\item Led a team in the Lockdown blue-teaming competition to a $3^{\texttt{rd}}$ place finish.  
+\end{itemize}
+	
+	\vspace{-7pt}
+	
+	\textbf{Syracuse Club Ski Racing Team} \hfill Sept 2022 - Current\\
+	\vspace{-9pt}
+	\begin{itemize}
+		\item Ski raced competitively in the USCSA collegiate league
+	\end{itemize}
+\vspace{-25pt}
+%	\section*{Notable Courses:}
+%	\begin{itemize}
+	%		\item \textbf{Evolutionary Machine Learning:} Developed machine learning systems in Python using NumPy
+	%		\item \textbf{Computer Graphics:} Used OpenGL and C++ to construct user interfaces and 3D animated scenes
+	%		\item \textbf{Pervasive Computing:} Built Android apps with Java and Kotlin
+	%		\item \textbf{Virtual Reality:} Made a Virtual Reality application using Unity and C\#
+	%		\item \textbf{Virtual Reality:} Made a Virtual Reality aplication using Unity and C\#
+	%		\item \textbf{Virtual Reality:} Made a Virtual Reality application using Unity and C\#
+	%		\item \textbf{Virtual Reality:} Made a Virtual Reality application using Unity and C\#
+	%	\end{itemize}
+%
+
+	
+	
+	\vspace{-18.5pt}
+	
+	
+	
+\end{document}
