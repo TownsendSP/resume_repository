@@ -1,0 +1,8 @@
+# Ignore intermediate and output files
+intermediate/
+output/
+*.synctex.gz
+*.out
+*.log
+*.aux
+*.pdf

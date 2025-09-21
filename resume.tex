@@ -1,33 +1,10 @@
-
-
-
-
 \input{preamble}             % geometry/fonts/macros for entries, etc.
-\usepackage{resume-variants} % toggles + helpers + \RenderVariant
 
-% Default variant if none provided from CLI
-\providecommand{\VARIANT}{se}
 
 \begin{document}
-	
-	% If you have hyperref and repeated section titles, this avoids anchor duplicate warnings:
-	\begingroup\hypersetup{pageanchor=false}\endgroup
-	
-	% ------- “all-in-one” fourth version -------
-	\newcommand{\RenderAllThree}{%
-		% restart page numbers per section (optional): add [resetpages]
-		\RenderVariant[resetpages]{cyber}{resume-body}
-		\RenderVariant[resetpages]{se}{resume-body}
-		\RenderVariant[resetpages]{ml}{resume-body}
-	}
-	
-	% Decide what to render
-	\ifdefstring{\VARIANT}{all}{%
-		\RenderAllThree
-	}{%
-		% Single variant build: just set and input once
-		\SetVariant{\VARIANT}%
+    
+
 		\input{resume-body}%
-	}
+	
 	
 \end{document}

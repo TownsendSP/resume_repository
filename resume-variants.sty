@@ -1,3 +1,17 @@
+% Ensure toggles are defined before use
+\usepackage{etoolbox}
+\newtoggle{isCyber}
+\newtoggle{isSE}
+\newtoggle{isML}
+% Macro to render variant-specific content inline or for a single variant
+% Usage: \VariantContent{cyber}{se}{ml}
+\newcommand{\VariantContent}[3]{%
+	\ifdefstring{\VARIANT}{all}{%
+		{\textcolor{blue}{Cyber:} #1}\;|\;{\textcolor{red}{SE:} #2}\;|\;{\textcolor{purple}{ML:} #3}%
+	}{%
+		\ifstrequal{\VARIANT}{cyber}{#1}{\ifstrequal{\VARIANT}{se}{#2}{#3}}%
+	}%
+}
 % --- in resume-variants.sty ---
 
 % Existing: \VARIANT, toggles, \CyberOnly, \SEOnly, \MLOnly, \VariantText, etc.
