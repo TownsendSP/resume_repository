@@ -11,18 +11,17 @@
 \vspace{-13.5pt}
 % skills section
 \section*{Skills}
-\textbf{Programming:} C, C++, C\#, Java, SQL, Bash, R, Javascript, Python, Django
-\Cyber{, Dynamic Analysis}%
-\SE{, CMake, Qt5, Gradle, OpenGL, HTML, \LaTeX, Haskell, Racket}%
+\textbf{Programming:} C, C++, C\#, Java, SQL, R, Javascript, Python, Django, 
+\SE{CMake, Qt5, Gradle, OpenGL, HTML, \LaTeX, Haskell, Racket}%
 \ML{, PyTorch, Tensorflow}\\
 
 \textbf{Tools:} Microsoft Office, JetBrains IDEs
 \Cyber{, Ghidra, Frida, Burp Suite, Binary Ninja, IDA}%
 \SE{, Git, Unity, Visual Studio, }%
-\ML{, Ghidra, Tensorflow, PyTorch}\\
+\ML{, Tensorflow, PyTorch}\\
 
-\textbf{Technical Proficiencies:} Reverse Engineering, Full-Stack, Object-Oriented Programming, Web Development, Mobile Development, Scripting
-\Cyber{, iOS Reversing, Binary Exploitation}%
+\textbf{Technical Proficiencies:} Reverse Engineering, Full-Stack, Object-Oriented Programming, Web \& Mobile Development, Scripting
+\Cyber{, Mobile Reversing, Binary Exploitation and Instrumentation, Web Exploitation, Penetration Testing}%
 \ML{, Machine Learning, Large Language Models, Data Mining \& Analysis, AI}
 \vspace{-17pt}
 
@@ -31,20 +30,24 @@
 \textbf{Engineering Intern, Agile Cyber Systems} {Assured Information Security} -- Rome, NY \hfill May 2025 -- Current \\
 \vspace{-8pt}
 \begin{itemize}
-	\item Architected a provider-agnostic Python framework that enabled rapid integration of LLM capabilities into enterprise products, improving documentation search via RAG and optimized for scalability and efficient inference on laptop-scale platforms.even on consumer GPUs.
-	\item Directed project strategy and key technical decisions, leveraging advanced expertise in machine learning and LLM internals to ensure efforts targeted the highest-impact performance and usability improvements.
-	\item Optimized system scalability by decoupling embedding from inference, freeing GPU resources for larger models and significantly enhancing response speed, reliability, and accuracy.
-	\item Integrated state-of-the-art LLMs (e.g., GLM 4.5 AIR, Qwen-3) within days of release, ensuring clients immediate access to leading-edge capabilities and strengthening product competitiveness.
-	\item Orchestrated a CI/CD pipeline using GitLab Actions and Docker and deployed GPU-backed LLM servers to support IDE assistants and integration projects, later enhancing maintainability by migrating to llama.cpp.
+	% General contributions
+	\item Designed a provider-agnostic Python framework enabling rapid integration of LLMs into enterprise products, improving documentation search via RAG and optimizing inference on consumer GPUs.
+	\item Directed project strategy and key technical decisions to maximize performance, usability, and scalability.
+	\item Deployed and maintained GPU-backed LLM servers with CI/CD pipelines using GitLab Actions and Docker.	
+	% Variant-specific contributions
+	\Cyber{\item Applied secure system design practices to LLM deployment, emphasizing isolation, maintainability, and compliance in enterprise environments.}
+	\SE{\item Enhanced framework maintainability by modularizing components and migrating core services to llama.cpp.}
+	\ML{\item Integrated state-of-the-art LLMs (GLM 4.5 AIR, Qwen-3) within days of release and optimized GPU memory allocation to support larger, faster models.}
 \end{itemize}
 \vspace{-8pt}
 \textbf{Engineering Intern, Analysis \& Exploitation} {Assured Information Security} -- Rome, NY \hfill May 2024 -- May 2025 \\
 \vspace{-8pt}
 \begin{itemize}
-	\item Reverse-engineered client binaries to recover Python source code via automated and manual bytecode translation, completing the engagement ahead of schedule and uncovering data retention violations
+	\item Reverse-engineered client binaries to recover Python source code via automated and manual bytecode translation, completing the engagement ahead of schedule by over two weeks and uncovering data retention violations
 	\item Assessed iOS app compliance with DHS security standards through reverse engineering, traffic analysis, and model manipulation, uncovering exploitable vulnerabilities in NLP model loading.
 	\item Researched DNP3 protocol for a client engagement and developed Python scripts simulating malicious activity.
 	\item Authored an iOS security testing handbook detailing workflows for app instrumentation, analysis on jailbroken/non-jailbroken devices, and techniques for identifying new vulnerabilities.
+	\item Performed runtime instrumentation with Frida and Javascript on a Flutter+Dart Android \& iOS app to demonstrate attack vectors that compromise user safety.
 \end{itemize}
 
 \vspace{-6pt}
