@@ -36,9 +36,9 @@ right=0.5in]{geometry}              % specify right page margin
 % --- Variant selection ---
 % Uncomment *one* of these for normal compile
 %\toggletrue{isCyber}
-\toggletrue{isSE}
+%\toggletrue{isSE}
 %\toggletrue{isML}
-%\toggletrue{isAll} % Default: print everything inline
+\toggletrue{isAll} % Default: print everything inline
 
 % --- Macros for conditional text ---
 \newcommand{\Cyber}[1]{\iftoggle{isCyber}{#1}{}\iftoggle{isAll}{\textcolor{red}{#1}}{}}

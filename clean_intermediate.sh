@@ -1,3 +1,3 @@
 #! /bin/bash
-mv ./*.synctex.gz ./*.out ./*.log ./*.aux ./intermediate/ -v
+mv ./*.synctex.gz ./*.out ./*.log ./*.aux ./*latexmk ./*fls ./intermediate/ -v
 mv ./*.pdf ./output/ -v
